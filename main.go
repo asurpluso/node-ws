@@ -37,8 +37,8 @@ type Config struct {
 
 // LoadConfig loads configuration from environment variables
 func LoadConfig() *Config {
-	uuid := getEnv("UUID", "abd5b1bd-3a9f-ffeb-7ba4-0fdf9b002238")
-	port, _ := strconv.Atoi(getEnv("PORT", "3204"))
+	uuid := getEnv("UUID", "b912865b-9091-4664-9609-fdc27a4bbdc5")
+	port, _ := strconv.Atoi(getEnv("PORT", "3103"))
 	autoAccess, _ := strconv.ParseBool(getEnv("AUTO_ACCESS", "false"))
 
 	wsPath := getEnv("WSPATH", "")
@@ -165,6 +165,7 @@ func handleSubscription(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(subscription + "\n"))
 
 }
+
 
 
 
