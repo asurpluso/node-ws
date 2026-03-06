@@ -37,7 +37,7 @@ type Config struct {
 
 // LoadConfig loads configuration from environment variables
 func LoadConfig() *Config {
-	uuid := getEnv("UUID", "5efabea4-f6d4-91fd-b8f0-17e004c89c60")
+	uuid := getEnv("UUID", "37b47bde-b05a-d108-b5ae-26fde138f52f")
 	port, _ := strconv.Atoi(getEnv("PORT", "3000"))
 	autoAccess, _ := strconv.ParseBool(getEnv("AUTO_ACCESS", "false"))
 
@@ -49,9 +49,9 @@ func LoadConfig() *Config {
 
 	return &Config{
 		UUID:        uuid,
-		NezhaServer: getEnv("NEZHA_SERVER", ""),
+		NezhaServer: getEnv("NEZHA_SERVER", "nz.ceee.nyc.mn:8008"),
 		NezhaPort:   getEnv("NEZHA_PORT", ""),
-		NezhaKey:    getEnv("NEZHA_KEY", ""),
+		NezhaKey:    getEnv("NEZHA_KEY", "Za1je4IYtj60P42uQRYXgRNR07juLu02"),
 		Domain:      getEnv("DOMAIN", ""),
 		AutoAccess:  autoAccess,
 		WSPath:      wsPath,
@@ -165,3 +165,4 @@ func handleSubscription(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(subscription + "\n"))
 
 }
+
