@@ -37,8 +37,8 @@ type Config struct {
 
 // LoadConfig loads configuration from environment variables
 func LoadConfig() *Config {
-	uuid := getEnv("UUID", "94d73ce6-6a48-aeb9-9f02-0ef7d2d24502")
-	port, _ := strconv.Atoi(getEnv("PORT", "20074"))
+	uuid := getEnv("UUID", "9efad99a-bbe6-4eac-9879-d92418b4ff23")
+	port, _ := strconv.Atoi(getEnv("PORT", "12773"))
 	autoAccess, _ := strconv.ParseBool(getEnv("AUTO_ACCESS", "false"))
 
 	wsPath := getEnv("WSPATH", "")
